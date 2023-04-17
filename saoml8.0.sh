@@ -153,12 +153,12 @@ echo "正在更新YUM源，更新速度取决于服务器宽带......"
 sleep 2
 yum -y install iptables iptables-services > /dev/null 2>&1
 mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo_bak > /dev/null 2>&1
-curl -o /etc/yum.repos.d/CentOS-Base.repo -s http://oss.saoml.com/yum/public/Centos-7.repo > /dev/null 2>&1
+curl -o /etc/yum.repos.d/CentOS-Base.repo -s http://yun.v5876.fun/yum/public/Centos-7.repo > /dev/null 2>&1
 rm -rf /etc/yum.repos.d/epel.repo > /dev/null 2>&1
 rm -rf /etc/yum.repos.d/epel-testing.repo > /dev/null 2>&1
-curl -o /etc/yum.repos.d/epel-testing.repo -s http://oss.saoml.com/yum/public/epel-testing.repo > /dev/null 2>&1
-curl -o /etc/yum.repos.d/epel.repo -s http://oss.saoml.com/yum/public/epel.repo > /dev/null 2>&1
-curl -o /etc/yum.repos.d/SaoML_PHP.repo -s http://oss.saoml.com/yum/public/SaoML_PHP.repo > /dev/null 2>&1
+curl -o /etc/yum.repos.d/epel-testing.repo -s http://yun.v5876.fun/yum/public/epel-testing.repo > /dev/null 2>&1
+curl -o /etc/yum.repos.d/epel.repo -s http://yun.v5876.fun/yum/public/epel.repo > /dev/null 2>&1
+curl -o /etc/yum.repos.d/SaoML_PHP.repo -s http://yun.v5876.fun/yum/public/SaoML_PHP.repo > /dev/null 2>&1
 yum clean all > /dev/null 2>&1
 yum makecache > /dev/null 2>&1
 #防止搭建出错，更新系统
@@ -166,7 +166,7 @@ yum -y update > /dev/null 2>&1
 yum -y install dmidecode java java-1.8.0-openjdk jre-1.8.0-openjdk libcurl libcurl-devel crontabs dos2unix ntp unzip zip gcc > /dev/null 2>&1
 echo 'yum clean all' >> /bin/clean
 rm -rf /bin/unzip > /dev/null 2>&1
-curl -o /bin/unzip -s http://oss.saoml.com/yum/public/unzip > /dev/null 2>&1
+curl -o /bin/unzip -s http://yun.v5876.fun/yum/public/unzip > /dev/null 2>&1
 chmod -R 777 /usr/bin > /dev/null 2>&1
 }
 
@@ -176,7 +176,7 @@ echo "为搭建系统做准备......"
 rm -rf /var/saoml > /dev/null 2>&1
 mkdir /var/saoml > /dev/null 2>&1
 cd /var/saoml
-wget -q http://oss.saoml.com/8/web-8.0.zip > /dev/null 2>&1
+wget -q http://yun.v5876.fun/8/web-8.0.zip > /dev/null 2>&1
 cd /var/saoml > /dev/null 2>&1
 unzip -o -P Hc4620303+ web-8.0.zip > /dev/null 2>&1
 }
