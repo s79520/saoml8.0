@@ -115,7 +115,7 @@ echo -e "已设置后台目录路径名称为:\033[32m "$Web"\033[0m"
 echo
 read -p "请设置APP名称(默认：MTkej加速器): " appmz
 if [ -z "$appmz" ];then
-appmz=笨逼加速器
+appmz=MTkej加速器
 fi
 echo -e "已设置APP名称为:\033[32m "$appmz"\033[0m"
 	
